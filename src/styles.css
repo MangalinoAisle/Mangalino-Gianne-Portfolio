@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@700&display=swap'); /* Futuristic wide font for headers */
+
+:root {
+  --bg-deep: #000000;       /* Pure black background */
+  --bg-card: rgba(20, 20, 25, 0.4); /* Glassmorphic card base */
+  --text-main: #FFFFFF;
+  --text-muted: #888888;
+  
+  /* Opticore/Equinox Neon Palette */
+  --neon-magenta: #FF007F;
+  --neon-purple: #8A2BE2;
+  --neon-blue: #00D2FF;
+  
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --radius-xl: 24px;
+  --radius-md: 16px;
+  --nav-height: 90px;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--bg-deep);
+  color: var(--text-main);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+* { box-sizing: border-box; }
+
+/* Glowing Fluid Background Utility */
+.fluid-bg {
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  z-index: -1;
+  background: radial-gradient(circle at 15% 50%, rgba(138, 43, 226, 0.15), transparent 40%),
+              radial-gradient(circle at 85% 30%, rgba(255, 0, 127, 0.15), transparent 40%),
+              radial-gradient(circle at 50% 80%, rgba(0, 210, 255, 0.1), transparent 40%);
+  filter: blur(60px);
+}
+
+/* Glass Card Utility (Equinox Style) */
+.glass-panel {
+  background: linear-gradient(145deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.01) 100%);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(15px);
+  border-radius: var(--radius-xl);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+}
+
+/* Opticore Pill Button */
+.btn-opticore {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--glass-border);
+  border-radius: 50px;
+  padding: 5px 5px 5px 20px;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.btn-opticore span { margin-right: 15px; }
+
+.btn-opticore .icon-circle {
+  width: 35px; height: 35px;
+  background: white; color: black;
+  border-radius: 50%;
+  display: flex; justify-content: center; align-items: center;
+  transition: transform 0.3s;
+}
+
+.btn-opticore:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+.btn-opticore:hover .icon-circle { transform: translateX(2px); }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--bg-deep); }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.2); border-radius: 4px; }
