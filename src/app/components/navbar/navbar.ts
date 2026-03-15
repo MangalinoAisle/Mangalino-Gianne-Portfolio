@@ -10,6 +10,8 @@ import { isPlatformBrowser } from '@angular/common';
   styleUrl: './navbar.css'
 })
 export class Navbar implements OnInit, OnDestroy {
+  // Property to track current theme state
+  isDarkMode = true;
 
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
 
@@ -20,6 +22,21 @@ export class Navbar implements OnInit, OnDestroy {
 
   private hamburger: HTMLElement | null = null;
   private navLinks: HTMLElement | null = null;
+
+  /**
+   * Toggles the 'light-theme' class on the document body 
+   * and updates the local state.
+   */
+  toggleTheme() {
+    if (!isPlatformBrowser(this.platformId)) return;
+    
+    this.isDarkMode = !this.isDarkMode;
+    if (this.isDarkMode) {
+      document.body.classList.remove('light-theme');
+    } else {
+      document.body.classList.add('light-theme');
+    }
+  }
 
   ngOnInit() {
     if (!isPlatformBrowser(this.platformId)) return;

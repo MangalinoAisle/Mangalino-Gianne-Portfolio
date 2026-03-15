@@ -240,62 +240,91 @@ export class Projects implements OnInit, AfterViewInit, OnDestroy {
     counters.forEach(c => observer.observe(c));
     this.observers.push(observer);
   }
-
-  // ===================== PROJECTS DATA =====================
-  projects = [
-    {
-      title: 'Rhode Skincare Clone',
-      purpose: 'To demonstrate proficiency in translating high-end, minimalist e-commerce web designs into fully functional, responsive front-end interfaces.',
-      features: 'Multi-page e-commerce flow, minimalist UI/UX mimicry, high-quality product showcase grid layouts, and seamless responsive design.',
-      tools: ['HTML5', 'CSS3', 'JavaScript', 'UI/UX Design'],
-      metrics: [
-        { label: 'Fidelity', value: 98 },
-        { label: 'Frontend', value: 95 },
-        { label: 'Responsive', value: 92 },
-      ],
-      images: [
-        'assets/r1.png', 
-        'assets/r2.png', 
-        'assets/r3.png'
-      ],
-      demoLink: 'https://rhodedupelandingpage.netlify.app',
-      githubLink: 'https://github.com/MangalinoAisle/Rhode-Dupe-Landing-Page'
-    },
-    {
-      title: 'Scoop Ice Cream',
-      purpose: 'To design and build a vibrant, interactive e-commerce website for a handcrafted ice cream shop utilizing a highly engaging scrapbook aesthetic.',
-      features: 'Fully functional vanilla JS shopping cart using sessionStorage, interactive 3D polaroid hover effects, custom CSS blob shapes, and dynamic category filtering.',
-      tools: ['HTML5', 'CSS3', 'JavaScript', 'Vercel'],
-      metrics: [
-        { label: 'Design', value: 98 },
-        { label: 'Frontend', value: 95 },
-        { label: 'UX Flow', value: 92 },
-      ],
-      images: [
-        'assets/scoop1.png',         
-        'assets/scoop2.png',
-        'assets/scoop3.png'
-      ],
-      demoLink: 'https://scoop-ice-cream.vercel.app/',
-      githubLink: 'https://github.com/MangalinoAisle/scoop-ice-cream'
-    },
-    {
-      title: 'Soda Pop',
-      purpose: 'To design and develop a vibrant promotional e-commerce interface for a healthy, plant-based soda brand, emphasizing modern aesthetics and interactive user experiences.',
-      features: 'Custom CSS animations (floating elements, organic shape blobs, infinite marquees), responsive Tailwind CSS grid layouts, dynamic Angular routing, and service-driven data fetching.',
-      tools: ['Angular','JavaScript', 'Tailwind CSS', 'TypeScript', 'UI/UX Design'],
-      metrics: [
-        { label: 'Design', value: 95 },
-        { label: 'Frontend', value: 90 },
-        { label: 'UX Flow', value: 88 },
-      ],
-      images: [
-        'assets/sodapop-1.png',
-        'assets/sodapop-2.png',
-        'assets/sodapop-3.png'
-      ],
-      demoLink: 'https://sodapopph.netlify.app',
-      githubLink: 'https://github.com/MangalinoAisle/Soda-Pop'
-    }
-  ];
+// ===================== UPDATED PROJECTS DATA =====================
+projects = [
+  {
+    title: 'Pure Smile',
+    purpose: 'A professional and clean landing page for dental or healthcare services, focusing on trust and clarity.',
+    features: 'Sleek UI, clear call-to-action sections, and a mobile-responsive interface.',
+    tools: ['HTML5', 'CSS3', 'JavaScript'],
+    metrics: [
+      { label: 'Design', value: 95 },
+      { label: 'Frontend', value: 92 },
+      { label: 'UX Flow', value: 91 },
+    ],
+    images: ['assets/puresmile-1.png', 'assets/puresmile2.png', 'assets/puresmile-3.png'], 
+    demoLink: 'https://pure-smile-landing-page.netlify.app',
+    githubLink: 'https://github.com/mangalinoaisle/Pure-Smile/'
+  },
+  {
+    title: 'Melody Motion Academy',
+    purpose: 'An educational platform designed for a music and dance academy, emphasizing course discovery and student engagement.',
+    features: 'Dynamic content sections, course listings, and a responsive design tailored for various devices.',
+    tools: ['HTML5', 'CSS3', 'JavaScript'],
+    metrics: [
+      { label: 'Design', value: 92 },
+      { label: 'Frontend', value: 93 },
+      { label: 'UX Flow', value: 90 },
+    ],
+    images: ['assets/melody1.png', 'assets/melody2.png', 'assets/melody3.png'],
+    demoLink: 'https://melody-motion-academy.vercel.app/',
+    githubLink: 'https://github.com/mangalinoaisle/melody-motion-academy/'
+  },
+  {
+    title: 'Little Oven',
+    purpose: 'A charming web interface for a bakery, focusing on presenting baked goods with an inviting and warm aesthetic.',
+    features: 'Responsive layout, product gallery, and smooth navigation for a seamless user experience.',
+    tools: ['HTML5', 'CSS3', 'JavaScript'],
+    metrics: [
+      { label: 'Design', value: 94 },
+      { label: 'Frontend', value: 90 },
+      { label: 'UX Flow', value: 89 },
+    ],
+    images: ['assets/little-oven-1.png', 'assets/little-oven-2.png', 'assets/little-oven-3.png'],
+    demoLink: 'https://little-oven.vercel.app/',
+    githubLink: 'https://github.com/mangalinoaisle/Little-Oven/'
+  },
+  {
+    title: 'Rhode Skincare Clone',
+    purpose: 'To demonstrate proficiency in translating high-end, minimalist e-commerce web designs into fully functional, responsive front-end interfaces.',
+    features: 'Multi-page e-commerce flow, minimalist UI/UX mimicry, high-quality product showcase grid layouts, and seamless responsive design.',
+    tools: ['HTML5', 'CSS3', 'JavaScript', 'UI/UX Design'],
+    metrics: [
+      { label: 'Fidelity', value: 98 },
+      { label: 'Frontend', value: 95 },
+      { label: 'Responsive', value: 92 },
+    ],
+    images: ['assets/r1.png', 'assets/r2.png', 'assets/r3.png'],
+    demoLink: 'https://rhodedupelandingpage.netlify.app',
+    githubLink: 'https://github.com/MangalinoAisle/Rhode-Dupe-Landing-Page'
+  },
+  {
+    title: 'Scoop Ice Cream',
+    purpose: 'To design and build a vibrant, interactive e-commerce website for a handcrafted ice cream shop utilizing a highly engaging scrapbook aesthetic.',
+    features: 'Fully functional vanilla JS shopping cart using sessionStorage, interactive 3D polaroid hover effects, custom CSS blob shapes, and dynamic category filtering.',
+    tools: ['HTML5', 'CSS3', 'JavaScript', 'Vercel'],
+    metrics: [
+      { label: 'Design', value: 98 },
+      { label: 'Frontend', value: 95 },
+      { label: 'UX Flow', value: 92 },
+    ],
+    images: ['assets/scoop1.png', 'assets/scoop2.png', 'assets/scoop3.png'],
+    demoLink: 'https://scoop-ice-cream.vercel.app/',
+    githubLink: 'https://github.com/MangalinoAisle/scoop-ice-cream'
+  },
+  {
+    title: 'Soda Pop',
+    purpose: 'To design and develop a vibrant promotional e-commerce interface for a healthy, plant-based soda brand, emphasizing modern aesthetics and interactive user experiences.',
+    features: 'Custom CSS animations (floating elements, organic shape blobs, infinite marquees), responsive Tailwind CSS grid layouts, dynamic Angular routing, and service-driven data fetching.',
+    tools: ['Angular', 'JavaScript', 'Tailwind CSS', 'TypeScript', 'UI/UX Design'],
+    metrics: [
+      { label: 'Design', value: 95 },
+      { label: 'Frontend', value: 90 },
+      { label: 'UX Flow', value: 88 },
+    ],
+    images: ['assets/sodapop-1.png', 'assets/sodapop-2.png', 'assets/sodapop-3.png'],
+    demoLink: 'https://sodapopph.netlify.app',
+    githubLink: 'https://github.com/MangalinoAisle/Soda-Pop'
+  }
+];
 }

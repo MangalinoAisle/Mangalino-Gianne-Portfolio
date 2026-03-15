@@ -538,19 +538,6 @@
   50%       { opacity: 0.6; transform: translateX(4px); }
 }
 
-@media (max-width: 900px) {
-  .process-steps {
-    flex-direction: column;
-    gap: 0;
-  }
-  .process-arrow {
-    transform: rotate(90deg);
-    margin: 0 0 0 2rem;
-  }
-  .process-step-inner { padding: 1.5rem 0; }
-  .process-desc { max-width: 100%; }
-}
-
 /* ══════════════════════════════════════
    EXPERTISE
 ══════════════════════════════════════ */
@@ -1024,14 +1011,42 @@
     grid-template-columns: 1fr;
     text-align: center;
     min-height: auto;
-    padding: 5rem 5% 4rem;
+    padding: 3rem 5% 3rem;
+    gap: 2.5rem;
   }
+
+  .process-steps { flex-direction: column; gap: 0; }
+  .process-arrow { transform: rotate(90deg); margin: 0 0 0 2rem; }
+  .process-step-inner { padding: 1.5rem 0; }
 
   .role-text-container { justify-content: center; }
   .bio { margin: 0 auto 2.5rem; }
   .hero-cta-row { justify-content: center; }
 
-  .hero-visual { height: auto; margin-top: 3rem; padding-bottom: 350px; }
+  /* Replace scale() hack with a proper responsive workspace */
+  .hero-visual {
+    transform: none;
+    height: auto;
+    width: 100%;
+    margin-top: 0;
+    padding-bottom: 0;
+  }
+
+  .dev-workspace {
+    position: relative;
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+    height: 360px;
+  }
+
+  /* Resize windows proportionally so they fit inside the container */
+  .browser-window  { width: 260px; height: 195px; top: 10px; right: 0; }
+  .editor-window   { width: 300px; top: 110px; left: 0; }
+  .terminal-window { width: 270px; bottom: 0; right: 0; }
+
+  .editor-content pre { font-size: 0.68rem; }
+  .terminal-content   { font-size: 0.68rem; }
 
   .about-strip {
     grid-template-columns: 1fr;
@@ -1044,10 +1059,45 @@
   .bento-grid { grid-template-columns: 1fr; }
   .projects-grid { grid-template-columns: 1fr; }
   .section-header { flex-direction: column; align-items: flex-start; }
+
+  .testimonials-grid { grid-template-columns: 1fr; }
+
+  .expertise-section,
+  .featured-projects-section,
+  .testimonials-section { padding: 4rem 5%; }
+
+  .process-strip { padding: 3rem 5%; }
+
+  .bottom-cta-section { margin: 2rem 5% 4rem; padding: 4rem 1.5rem; }
 }
 
 @media (max-width: 600px) {
-  .headline { font-size: 3rem; }
-  .bottom-cta-section { margin: 2rem 4% 5rem; padding: 5rem 1.5rem; }
-  .cta-content h2 { font-size: 1.6rem; }
+  .headline { font-size: clamp(2rem, 9vw, 2.8rem) !important; }
+
+  .hero-section { padding: 2rem 5% 2.5rem; gap: 2rem; }
+
+  .dev-workspace { height: 300px; max-width: 340px; }
+  .browser-window  { width: 200px; height: 150px; top: 8px; right: 0; }
+  .editor-window   { width: 230px; top: 90px; left: 0; }
+  .terminal-window { width: 210px; bottom: 0; right: 0; }
+  .editor-content pre { font-size: 0.6rem; }
+  .terminal-content   { font-size: 0.6rem; }
+  .code-tag { font-size: 0.6rem; padding: 4px 8px; }
+
+  .bottom-cta-section { margin: 2rem 0 3rem; padding: 3.5rem 1.2rem; }
+  .cta-content h2 { font-size: 1.5rem !important; }
+
+  .bento-grid { gap: 1rem; }
+  .dark-card { padding: 1.5rem; }
+
+  .process-desc { max-width: 100%; }
+
+  .section-title-box { margin-bottom: 2.5rem; }
+}
+
+@media (max-width: 400px) {
+  .dev-workspace { height: 260px; max-width: 290px; }
+  .browser-window  { width: 170px; height: 130px; }
+  .editor-window   { width: 195px; }
+  .terminal-window { width: 180px; }
 }
